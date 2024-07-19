@@ -1,0 +1,335 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manos maravillosas", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Asegura que main y footer estén uno debajo del otro */
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('https://img.freepik.com/foto-gratis/fondo-papel-tapiz-colorido-borroso-artistico_58702-8178.jpg?w=826&t=st=1721201188~exp=1721201788~hmac=b975060072ad8b634b73d00d28b0270d20e21d740860b369b1cccbe83c78c680') 
+                no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(252, 121, 230);
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nombre.empresa {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(0, 0, 0); /* Color de los enlaces en estado normal */
+    text-decoration: none;
+    font-weight: normal; /* Cambiado a normal */
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hacer el enlace de Inicio negrita */
+nav ul li:first-child a {
+    font-weight: bold;
+}
+
+/* Cambiar color de hover */
+nav a:hover {
+    color: #fff;
+    background-color: aqua;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 0; /* Asegúrate de que el hero esté separado del header */
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: crimson;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: rgb(150, 13, 40);
+}
+
+/* Products Section */
+.products {
+    padding: 50px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la sección de productos */
+}
+
+.products h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-size: 1.2rem;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.product-item button {
+    background: crimson;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.product-item button:hover {
+    background: rgb(150, 13, 40);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la sección de características */
+}
+
+.features h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 2rem;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-bottom: solid crimson;
+    animation: shake 0.2s;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #a3a3a3;
+}
+
+.input-box textarea {
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.input-box i {
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ i {
+    color: crimson;
+}
+
+form button {
+    background: crimson;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+form button:hover,
+.links a:hover {
+    background: rgb(150, 13, 40);
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(236, 105, 236); 
+    padding: 20px;
+    text-align: center; 
+    bottom: 0px;
+    position: fixed;
+    left: 0px ;
+    width: 100%;
+}

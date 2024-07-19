@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Style/StyleLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a href="#" class="logo">
+                    <img src="maravillosas.jpg" alt="Logo">
+                    <span class="brand-name"></span>
+                </a>
+            </div>
+            <button class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li><a href="inicio.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="Accesorios.html" class="nav-link">Productos</a></li>
+                    <li><a href="Registro.html" class="nav-link">Registro</a></li>
+                    <li><a href="Login.html" class="nav-link">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Recuerdame</label>
+                <a href="#">Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>No tienes una cuenta? <a href="#">Registrarse</a></p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div>Grupo de Duoc UC</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggler.addEventListener('click', () => {
+                navbarCollapse.classList.toggle('active');
+                navbarToggler.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
+

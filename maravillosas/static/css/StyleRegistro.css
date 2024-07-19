@@ -1,0 +1,245 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Asegura que main y footer estén uno debajo del otro */
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('https://img.freepik.com/foto-gratis/fondo-papel-tapiz-colorido-borroso-artistico_58702-8178.jpg?w=826&t=st=1721201188~exp=1721201788~hmac=b975060072ad8b634b73d00d28b0270d20e21d740860b369b1cccbe83c78c680') 
+                no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    min-height: 70px;
+    background-color: rgb(252, 121, 230);
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+
+.nav-link:hover {
+    color: #fff;
+    background-color: aqua;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-collapse.active {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar-collapse.active .navbar-nav {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-toggler.active .navbar-toggler-icon {
+        background: transparent;
+    }
+
+    .navbar-toggler.active .navbar-toggler-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .navbar-toggler.active .navbar-toggler-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+}
+
+/* Form Styles */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px; /* Espacio para que no se sobreponga con el header */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    color: #fff;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid transparent;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.input-field input:focus {
+    border-bottom: solid crimson;
+    animation: shake 0.2s;
+}
+
+.input-field input::placeholder {
+    color: #a3a3a3;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+label input {
+    margin-right: 10px;
+}
+
+.btn {
+    background: crimson;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: rgb(150, 13, 40);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(236, 105, 236);
+    padding: 20px;
+    text-align: center;
+    bottom: 0px;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+}
